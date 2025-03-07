@@ -1,0 +1,42 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.bg-hero{
+    position: relative;
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 50px;
+    overflow-y: inherit;
+    width: 100%;
+    background: url("andrea-davis-TYkSzj7LKnM-unsplash.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.bg-hero::before{
+    content: "";
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right bottom,#05135a,#05135a);
+    opacity: 0.6;
+}
+
+input,textarea{
+    outline: solid 1px skyblue;
+}
+
+#showpass input,span{
+    outline: solid 1px skyblue;
+}
+
+#tarea{
+    resize: none!important;
+}
+

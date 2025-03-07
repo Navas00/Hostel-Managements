@@ -1,0 +1,20 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    background: url("study.jpg") no-repeat center;
+    background-size: cover;
+    overflow: auto;
+    position: relative;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 800px;
+    background-image: linear-gradient(to right bottom,#000,#000);
+    opacity: 0.4;
+}

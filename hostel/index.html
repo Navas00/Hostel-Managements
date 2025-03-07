@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel</title>
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <link rel="stylesheet" href="landing.css">
+    <style>
+        ::-webkit-scrollbar{
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb{
+            border-radius: 5px;
+            background-color: rgb(171, 176, 180);
+        }
+
+        ::-webkit-scrollbar-thumb:hover{
+            background-color: rgb(101, 106, 110);
+        }
+	</style>
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#myscroll" data-bs-offset="0">
+    <div id="loader">
+        <div class="circle">
+            <img src="loader.gif" alt="">
+        </div>
+    </div>
+    <div class="container-fluid px-0">
+        <div class="image" id="home">
+            <div class="container">
+
+                <!-- navbar start-->
+                <nav id="myscroll" class="navbar fixed-top navbar-expand-lg navbar-dark">
+                    <a href="" class="navbar-brand ms-5">Hostel</a>
+                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"><span class="navbar-toggler-icon">
+                    </span></button>
+                    <div class="navbar-collapse collapse" id="menu">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="#testimonal" class="nav-link">Testimonal</a></li>
+                            <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
+                            <li class="nav-item"><a href="student_login.php" class="nav-link">Login</a></li>
+                            <li class="nav-item"><a href="register.html" class="nav-link">Register</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- navbar end-->
+
+                <div class="row">
+                    <div class="col-md-6 m-auto text-white text-center" style="z-index: 1;">
+                        <div class="title">
+                            <h1 class="display-3 d-flex">Welcome To Our <h1 class="typing display-3">Hostel</h1></h1>
+                            <h5 class="lead">Your Home Away From Home</h5>
+                            <a href="register.html" id="book" class="btn btn-lg lead">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- carousel start-->
+        <div id="testimonal">
+            <div class="carousel slide carousel-fade" data-bs-ride="carousel"  data-bs-interval="5000" id="mycarousel">
+                <ol class="carousel-indicators">
+                    <li type="button" data-bs-slide-to="0" data-bs-target="#mycarousel" class="active" style="height: 10px; width: 10px;"></li>
+                    <li type="button" data-bs-slide-to="1" data-bs-target="#mycarousel" style="height: 10px; width: 10px;"></li>
+                    <li type="button" data-bs-slide-to="2" data-bs-target="#mycarousel" style="height: 10px; width: 10px;"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <p class="display-6 mt-3 d-flex align-items-center justify-content-center" style="font-weight: bold;color: #f8f9fa;">Testimonal</p>
+                    <div class="carousel-item active">
+                        <div class="">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="testimonal/pexels-italo-melo-2379005.jpg" alt="profile">
+                                    <h5 class="text-center pt-2">Wilson</h5>
+                                    <p class="text-center pt-2">I recently stayed at this Wanderlust Hostel and had an amazing experience! The facilities were clean and well-maintained,and the staff was incredibly friendly and helpful.The location was also perfect for exploring the city.I would definitely recommend this hostel to anyone looking for a comfortable and for her excellent recommendations and hospitality!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="testimonal/pexels-simon-robben-614810.jpg" alt="profile">
+                                <h5 class="text-center pt-2">Vijay</h5>
+                                <p class="text-center pt-2">I had a great time at the Adventure Hostel! The atmosphere was fun and lively,with plenty of opportunities to socialize with other travelers.The staff,particularly Alex,went above and beyond to make sure we had everything we neede and provided great tips for exploring the area.I would definitely stay here again!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="testimonal/pexels-pixabay-220453.jpg" alt="profile">
+                                <h5 class="text-center pt-2">Navas</h5>
+                                <p class="text-center pt-2">The Wanderlust Hostel was perfect place to unwind and relax after a long trip.The rooms were cozy and comfortable,and the staff,especially Samantha,was incredibly welcoming and accommodating.The location was also unbeatable,with stunning ocean views just step away.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <button class="carousel-control-prev" type="button" data-bs-slide="prev" data-bs-target="#mycarousel">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-slide="next" data-bs-target="#mycarousel">
+                            <span class="carousel-control-next-icon"></span>
+                    </button>
+            </div>
+        </div>
+
+        <!-- carousel end-->
+
+        <!-- contact page start-->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 lead">
+                        <h1 class="display-5 my-4" style="font-weight: bold; color: #adb5bd;">Contact Us</h1>
+                        <div class="mb-5">
+                            <span class="d-flex mt-3"><i class="fas fa-map-marker-alt" style="font-size: 30px;"></i><h5 class="text-white ms-3">ADDRESS:</h5></span>
+                            <h6 class="text-white mt-3">198 West Mannady,<br>Chennai</h6>
+                        </div>
+                        <div class="mb-5">
+                            <span class="d-flex"><i class="fas fa-phone-alt" style="font-size: 30px;"></i><h5 class="text-white ms-3">PHONE:</h5></span>
+                            <h6 class="text-white mt-3">+91 99879 53450</h6>
+                        </div>
+                        <div class="mb-5">
+                            <span class="d-flex"><i class="fas fa-paper-plane" style="font-size: 30px;"></i><h5 class="text-white ms-3">EMAIL:</h5></span>
+                            <h6 class="text-white mt-3">wanderlust@gmail.com</h6>
+                        </div>
+                        <div class="mb-3">
+                            <span class="d-flex"><i class="fas fa-globe" style="font-size: 30px;"></i><h5 class="text-white ms-3">WEBSITE:</h5></span>
+                            <h6 class="text-white mt-3">wanderlust.com</h6>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <form action="guest.php" method="post" novalidate>
+                            <div class="card my-5">
+                                <div class="card-body mt-3" id="guest">
+                                    <h5 class="card-title">Get in touch</h5>
+                                    <div class="mb-3">
+                                        <input type="text" placeholder="Name" name="name" class="form-control" required>
+                                        <div class="invalid-feedback">
+                                            <p>Enter your name</p>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" name="email" placeholder="Email" class="form-control" required>
+                                        <div class="invalid-feedback">
+                                            <p>Enter your email</p>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <textarea style="resize: none;" name="msg" class="form-control" placeholder="Message" rows="5" required></textarea>
+                                        <div class="invalid-feedback">
+                                            <p>Enter your message</p>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 mx-auto">
+                                        <div class="g-recaptcha" data-sitekey="6LfnIrEkAAAAAE_Z1wZ_fL4Qvw3YROIJmpKFx49m"></div>
+                                        <p id="captcha" style="color: var(--bs-danger);"></p>
+                                    </div>
+                                    <div class="grid mb-3">
+                                        <button class="btn btn-primary" name="touch">Send Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- contact page end-->
+
+        <!-- footer-->
+        <footer class="text-white p-2 justify-content-center align-items-center" style="background-color: black; display: none;">
+            <p>Copyright &copy; Abdullah</p>
+        </footer>
+    </div>
+    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-5.3.0-alpha1-dist/jquery/jquery.min.js"></script>
+    <script>
+        'use strict';
+        var form=document.querySelectorAll("form");
+        Array.from(form).forEach( form =>{
+            form.addEventListener("submit",event =>{
+                if(!form.checkValidity()){
+                    event.stopPropagation();
+                    event.preventDefault();
+                }
+                var response=grecaptcha.getResponse();
+            if(response.length == 0){
+                event.preventDefault();
+                console.log("captcha not checked");
+                document.getElementById("captcha").innerText="Please Check Captcha";
+            } else{
+                console.log("captcha checked");
+            }
+                form.classList.add("was-validated");
+            })
+        })
+
+        function ack(){
+            var succ="<div class=\"alert alert-success fade show\"> \
+                      <h4 class=\"text-center\">Data Is Updated!</h4> \
+                      <h6 class=\"text-center\">Thank You!</h6> \
+                      </div>";
+            $("#guest").html(succ);
+            localStorage.setItem("touch","true");
+        }
+        var url=window.location.search.substring(1);
+        if(url == "touch=true"){
+            ack();
+        }
+
+        if(localStorage.getItem("touch")){
+            ack();
+        }
+
+        $(document).ready(function(){
+            $(".circle").fadeOut('slow');
+            $("#loader").delay(5000).fadeOut('slow');
+            $("#loader").hide();
+            $(".image").css('display','grid');
+            $("footer").css('display','flex');
+            $("#testimonal").css('display','grid');
+            $("#contact").css('display','grid');
+            $('[data-bs-spy="scroll"]').each(function () {
+                var $spy = $(this).scrollspy('refresh');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="register.css">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</head>
+
+<body>
+    <div class="bg-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-dark mx-auto mt-5">
+                    <div class="card mt-5">
+                        <div class="card-body p-4">
+                            <form action="user.php" method="post" enctype="multipart/form-data" novalidate autocomplete="off">
+                                <!-- step one-->
+                                <div class="progress mt-3">
+                                    <div id="pbar" style="width: 25%;" class="progress-bar"></div>
+                                </div>
+                                <h5 id="step" class="card-title text-center mt-3">Step 1</h5>
+                                <div id="step1">
+                                    <div class="mb-3">
+                                        <label for="first" class="form-label">Name</label>
+                                        <input type="text" placeholder="Name"   name="name" class="form-control"
+                                            required>
+                                        <div class="invalid-feedback">
+                                            <p>Enter your name</p>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="first" class="form-label">Class</label>
+                                                <input type="text" placeholder="Class" name="class"  class="form-control"
+                                                    required>
+                                                <div class="invalid-feedback">
+                                                    <p>Enter your class</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="first" class="form-label">Roll No</label>
+                                                <input type="number" id="rollno" placeholder="Roll No" name="rollno"
+                                                      class="form-control" required>
+                                                <div class="invalid-feedback">
+                                                    <p>Enter your roll No</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="first" class="form-label">Father name</label>
+                                        <input type="text"  placeholder="Father name" name="fname" class="form-control"
+                                            required> 
+                                        <div class="invalid-feedback">
+                                            <p>Enter your father name</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid">
+                                        <button id="btnstep2" onclick="gostep2()" type="button" class="btn btn-primary  mt-3 justify-content-center">Next</button>
+                                    </div>
+                                </div>
+                                <div id="step2">
+                                    <!-- step two-->
+                                    <div class="mb-3">
+                                        <label for="city" class="form-label">City</label>
+                                        <input type="text"  placeholder="City" name="city" class="form-control" required>
+                                        <div class="invalid-feedback">
+                                            <p>Enter city name</p>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="state" class="form-label">State</label>
+                                                <input type="text" placeholder="State" id="state" name="state" class="form-control" required>
+                                                <div class="invalid-feedback">
+                                                    <p>Enter your state</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="zipcode" class="form-label">Zip Code</label>
+                                                <input type="number" placeholder="zip code" id="zipcode" name="code" class="form-control" required>
+                                                <div class="invalid-feedback">
+                                                    <p>Enter Zip Code</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="addr" class="form-label">Address</label>
+                                        <textarea name="addr" style="resize: none;" id="addr" rows="3" id="tarea" class="form-control"
+                                            required></textarea>
+                                        <div class="invalid-feedback">
+                                            <p>Enter your address</p>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label d-flex form-check-inline">Gender</label>
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" id="male" name="gender" class="form-check-input"
+                                                value="male" required>
+                                            <label for="male" class="form-check-label">Male</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" id="female" name="gender" class="form-check-input"
+                                                value="female" required>
+                                            <label for="female" class="form-check-label">Female</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" id="other" name="gender" class="form-check-input"
+                                                value="others" required>
+                                            <label for="other" class="form-check-label">Others</label>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-2 d-flex justify-content-between">
+                                        <button type="button" onclick="gostep1()"  class="btn btn-primary">Previous</button>
+                                        <button type="button" onclick="gostep3()"  class="btn btn-primary">Next</button>
+                                    </div>
+                                </div>
+                                <div id="step3">
+                                    <!--  step three  -->
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">Phone number</label>
+                                        <input type="number" placeholder="Phone"  name="phone" class="form-control"
+                                            required>
+                                        <div class="invalid-feedback">
+                                            <p>Enter your phone number</p>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" placeholder="Email"  name="email" class="form-control" required>
+                                        <div class="invalid-feedback">
+                                            <p>Check your email</p>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="pass" class="form-label">Password</label>
+                                        <div class="col-md-6 mb-3">
+                                            <input type="password" id="pass" name="pass" placeholder="Password"
+                                                class="form-control"  required>
+                                            <div class="invalid-feedback">
+                                                <p>Enter password</p>
+                                            </div>
+                                        </div>
+                                        <div class="mb-2 col-md-6">
+                                            <input type="password" id="cpass" onblur="checkpass(event)"  placeholder="Confirm Password" class="form-control" required>
+                                                <p id="alert" style="color: var(--bs-danger-text)"></p>
+                                            <div class="invalid-feedback">
+                                                <p>Re-type password</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" onclick="showpass()" id="shp" class="form-check-input">
+                                        <label for="shp" class="form-check-label">Show Password</label> 
+                                    </div>
+                                    <div class="mb-3 d-flex justify-content-between gap-2 d-grid">
+                                        <button onclick="gostep2()" class="btn btn-primary">Previous</button>
+                                        <button type="button" onclick="gostep4()" class="btn btn-primary">Next</button>
+                                    </div>
+                                </div>
+                                <div id="step4">
+                                    <div class="mb-3">
+                                        <label for="profile" class="form-label">Upload your photo</label>
+                                        <input type="file" class="form-control" id="profile" name="profile" required>
+                                        <div class="invalid-feedback">
+                                            <p>Upload your photo</p>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 mx-auto">
+                                        <div class="g-recaptcha" data-sitekey="6LfnIrEkAAAAAE_Z1wZ_fL4Qvw3YROIJmpKFx49m"></div>
+                                        <p id="captcha" style="color: var(--bs-danger-text);"></p>
+                                    </div>
+                                    <div class="mb-3 mt-5 d-flex justify-content-between gap-2 d-grid">
+                                        <button onclick="gostep3()" class="btn btn-primary">Previous</button>
+                                        <button type="submit" name="register" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+
+    <script>
+        //for multistep form
+        var step1=document.getElementById("step1");
+        var step2=document.getElementById("step2");
+        var step3=document.getElementById("step3");
+        var step4=document.getElementById("step4");
+
+        var pbar=document.getElementById("pbar");
+
+        step2.style.display="none";
+        step3.style.display="none";
+        step4.style.display="none";
+
+        function showpass(){
+            var pass=document.getElementById("pass");
+            if(pass.type == "password"){
+                pass.type = "text";
+            } else{
+                pass.type = "password";
+            }
+        }
+
+        function checkpass(event){
+            var pass=document.getElementById("pass").value;
+            var cpass=document.getElementById("cpass").value;
+            if(cpass != pass){
+                var alert=document.getElementById("alert");
+                event.stopPropagation();
+                event.preventDefault();
+                alert.innerText="Password must be same";
+            } else{
+                alert.innerText="";
+            }
+        }
+
+        function increasebar() {
+            var currentWidth = parseInt(pbar.style.width, 10);
+            if (currentWidth < 100) {
+            pbar.style.width = (currentWidth + 25) + '%';
+            }
+        }
+        function decreasebar() {
+            var currentWidth = parseInt(pbar.style.width, 10);
+            if (currentWidth > 0) {
+                pbar.style.width = (currentWidth - 25) + '%';
+            }
+        }
+        function gostep2(){
+            step1.style.display="none";
+            step2.style.display="grid";
+            step3.style.display="none";
+            step4.style.display="none";
+            document.getElementById("step").innerText="Step 2";
+            if(pbar.style.width == "25%"){
+                increasebar();
+            } else{
+                decreasebar();
+            }
+
+        } 
+
+        function gostep1(){
+            step1.style.display="grid";
+            step2.style.display="none";
+            step3.style.display="none";
+            step4.style.display="none";
+            document.getElementById("step").innerText="Step 1";
+            pbar.style.width ="25%";
+        }
+
+        function gostep3(){
+            step1.style.display="none";
+            step2.style.display="none";
+            step3.style.display="grid";
+            step4.style.display="none";
+            document.getElementById("step").innerText="Step 3";
+            if(pbar.style.width == "50%"){
+                increasebar();
+            } else{
+                decreasebar();
+            }
+        }
+
+        function gostep4(){
+            step1.style.display="none";
+            step2.style.display="none";
+            step3.style.display="none";
+            step4.style.display="grid";
+            document.getElementById("step").innerText="Step 4";
+            if(pbar.style.width == "75%"){
+                increasebar();
+            } else{
+                decreasebar();
+            }
+        }
+
+        var forms = document.querySelectorAll("form");
+            Array.from(forms).forEach(form => {
+            form.addEventListener("submit", event => {
+                if (!form.checkValidity()) {
+                    event.stopPropagation();
+                    event.preventDefault();
+                }
+                var response=grecaptcha.getResponse();
+            if(response.length == 0){
+                event.preventDefault();
+                console.log("captcha not checked");
+                document.getElementById("captcha").innerText="Please Check Captcha";
+            } else{
+                console.log("captcha checked");
+            }
+            var rollno=document.getElementById("rollno").value;
+            localStorage.setItem("rollno",rollno);
+            form.classList.add("was-validated");
+            })
+        })
+    </script>
+</body>
+
+</html>
